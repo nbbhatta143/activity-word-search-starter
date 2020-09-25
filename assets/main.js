@@ -38,28 +38,21 @@ searchButton.addEventListener("click", function () {
   // "No results. Too bad!")
 
   console.log(userInput);
-  if (sentence.includes(userInput)) {
-    searchResults.innerHTML = "A match was found!";
-  } else {
-    searchResults.innerHTML = "No results. Too bad!";
-  }
-
-  let wordColoring = "";
 
   sentence = sentence.split(/[ ,]+/);
   console.log(sentence);
   for (i = 0; i <= sentence.length; i++) {
     if (sentence[i] === userInput) {
       count += 1;
-      wordColoring = applyHighlights(sentence[i]);
+      sentence[i].innerHTML = "<mark></mark>";
+    } else {
+      searchResults.innerHTML = "No results. Too bad!";
     }
   }
-  alert("Found " + count);
+  searchResults.innerHTML = count + " match was found!";
   console.log(count);
 });
-function applyHighlights(text) {
-  return text.replace(/\n$/g, "\n\n").replace(/[A-Z].*?\b/g, "<mark></mark>");
-}
+
 // STRETCH GOALS (easiest to hardest):
 //
 //  • Customize the CSS to your liking.
