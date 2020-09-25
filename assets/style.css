@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: 'Montserrat', sans-serif;
-  --default-border: 2px dotted grey;
+  font-family: "Montserrat", sans-serif;
+  --default-border: 2px solid grey;
   --default-margin: 50px;
 }
 
@@ -23,7 +23,13 @@ main {
   margin: 0px 0px var(--default-margin) var(--default-margin);
   text-align: left;
 }
-
+#sentence {
+  text-indent: 50px;
+  border: var(--default-border);
+}
+p {
+  margin-left: 10px;
+}
 fieldset {
   border: var(--default-border);
   padding: 20px;
@@ -38,4 +44,7 @@ fieldset {
   font-size: 1em;
   margin: var(--default-margin) 0px;
   border: var(--default-border);
+}
+.matched {
+  background-color: lightblue;
 }
