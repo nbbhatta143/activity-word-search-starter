@@ -44,9 +44,6 @@ searchButton.addEventListener("click", function () {
   for (i = 0; i <= sentence.length; i++) {
     if (sentence[i] === userInput) {
       count += 1;
-      sentence[i].innerHTML = "<mark></mark>";
-    } else {
-      searchResults.innerHTML = "No results. Too bad!";
     }
   }
   searchResults.innerHTML = count + " match was found!";

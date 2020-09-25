@@ -45,7 +45,7 @@ fieldset {
   margin: var(--default-margin) 0px;
   border: var(--default-border);
 }
-mark {
+.heighlight {
   color: transparent;
   background-color: #b5d185; /* or whatever */
 }
