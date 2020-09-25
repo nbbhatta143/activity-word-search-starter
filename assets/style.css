@@ -45,6 +45,7 @@ fieldset {
   margin: var(--default-margin) 0px;
   border: var(--default-border);
 }
-.matched {
-  background-color: lightblue;
+mark {
+  color: transparent;
+  background-color: #b5d185; /* or whatever */
 }

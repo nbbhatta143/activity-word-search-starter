@@ -51,14 +51,15 @@ searchButton.addEventListener("click", function () {
   for (i = 0; i <= sentence.length; i++) {
     if (sentence[i] === userInput) {
       count += 1;
-      wordColoring = sentence[i];
-      wordColoring.style.color = "green";
+      wordColoring = applyHighlights(sentence[i]);
     }
   }
   alert("Found " + count);
   console.log(count);
 });
-
+function applyHighlights(text) {
+  return text.replace(/\n$/g, "\n\n").replace(/[A-Z].*?\b/g, "<mark></mark>");
+}
 // STRETCH GOALS (easiest to hardest):
 //
 //  • Customize the CSS to your liking.
